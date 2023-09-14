@@ -1,8 +1,10 @@
+// src/App.test.js
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders welcome message', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const welcomeElement = screen.getByText('Bienvenido a Mi Tienda'); // Elimina la expresión regular
+  expect(welcomeElement).toBeInTheDocument();
 });
+
