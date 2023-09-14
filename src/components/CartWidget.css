@@ -1,41 +1,25 @@
-/* CartWidget.css */
+/* src/components/CartWidget.css */
 
-/* Estilo para el contenedor del carrito */
-.cart-widget {
-    position: relative;
-    cursor: pointer; /* Cambia el cursor al pasar sobre el carrito */
-    margin-right: 15px; /* Espacio a la derecha del ícono del carrito */
-  }
-  
-  /* Estilo para el ícono del carrito */
-  .cart-widget i {
-    font-size: 24px; /* Tamaño del ícono */
+/* Estilo del ícono del carrito de compras */
+.cart-icon {
+    font-size: 2rem; /* Tamaño del ícono */
     color: #333; /* Color del ícono */
+    margin-right: 8px; /* Espacio entre el ícono y el contador */
+    transition: transform 0.2s ease-in-out; /* Animación de escala al pasar el mouse */
   }
   
-  /* Estilo para el número de productos en el carrito */
-  .cart-widget .badge {
-    position: absolute;
-    top: -8px; /* Ajusta la posición verticalmente */
-    right: -10px; /* Ajusta la posición horizontalmente */
-    font-size: 12px; /* Tamaño de fuente del número */
-    background-color: #e74c3c; /* Color de fondo */
-    color: #fff; /* Color del texto */
-    padding: 4px 8px; /* Relleno interno */
-    border-radius: 50%; /* Forma circular */
-    animation: pulse 1s infinite; /* Animación de pulso */
+  /* Estilo del contador */
+  .badge {
+    background-color: #ff5722; /* Color de fondo del contador */
+    font-size: 0.8rem; /* Tamaño de fuente del contador */
+    padding: 4px 8px; /* Espaciado dentro del contador */
+    border-radius: 50%; /* Forma circular del contador */
+    transform: scale(0); /* Escala inicial para animación */
+    transition: transform 0.2s ease-in-out; /* Animación de escala al pasar el mouse */
   }
   
-  /* Animación de pulso */
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
+  /* Estilo de la animación cuando el contador se muestra al pasar el mouse */
+  .cart-widget:hover .badge {
+    transform: scale(1); /* Escala completa al pasar el mouse */
   }
   
