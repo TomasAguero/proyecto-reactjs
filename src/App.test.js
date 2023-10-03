@@ -7,4 +7,3 @@ test('renders welcome message', () => {
   const welcomeElement = screen.getByText('Bienvenido a Mi Tienda'); // Elimina la expresión regular
   expect(welcomeElement).toBeInTheDocument();
 });
-
